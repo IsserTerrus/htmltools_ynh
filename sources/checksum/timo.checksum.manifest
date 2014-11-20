@@ -1,0 +1,11 @@
+CACHE MANIFEST
+
+CACHE:
+index.php
+../0common/common.css
+../0common/flattr.png
+crypto-js/rollups/md5.js
+crypto-js/rollups/sha1.js
+crypto-js/rollups/sha256.js
+crypto-js/rollups/sha3.js
+crypto-js/rollups/sha512.js

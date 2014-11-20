@@ -1,0 +1,44 @@
+{
+    "name": "HTML Tools",
+    "id": "htmltool",
+    "description": {
+        "en": "An easy HTML toolset",
+        "fr": "Un ensemble d'outils HTML simple et pratique"
+    },
+    "developer": {
+        "name": "IsserTerrus",
+        "email": "isserterrus@switchserver.fr",
+        "url": "https://www.switchserver.fr/?page_id=2"
+    },
+    "multi_instance": "false",
+    "arguments": {
+        "install" : [
+            {
+                "name": "domain",
+                "ask": {
+                    "en": "Choose a domain for HTML Tools",
+                    "fr": "Choisissez un domaine pour HTML Tools"
+                },
+                "example": "domain.org"
+            },
+            {
+                "name": "path",
+                "ask": {
+                    "en": "Choose a path for HTML Tools",
+                    "fr": "Choisissez un chemin pour HTML Tools"
+                },
+                "example": "/htmltool",
+                "default": "/htmltool"
+            },
+            {
+                "name": "is_public",
+                "ask": {
+                    "en": "Is it a public Tools site ?",
+                    "fr": "Est-ce un site public ?"
+                },
+                "choices": ["Yes", "No"],
+                "default": "Yes"
+            }
+        ]
+    }
+}

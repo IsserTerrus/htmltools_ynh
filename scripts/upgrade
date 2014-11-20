@@ -1,0 +1,38 @@
+#!/bin/bash
+
+domain=$(sudo yunohost app setting htmltool domain)
+path=$(sudo yunohost app setting htmltool path)
+is_public=$(sudo yunohost app setting htmltool is_public)
+
+# Remove trailing "/" for next commands
+path=${path%/}
+
+# Copy files to the right place
+final_path=/var/www/htmltool
+sudo mkdir -p $final_path
+sudo cp -a ../sources/* $final_path
+
+# Files owned by root, www-data can just read
+sudo find $final_path -type f | xargs sudo chmod 644
+sudo find $final_path -type d | xargs sudo chmod 755
+sudo chown -R root: $final_path
+
+# except for data and tmp subdir, where www-data must have write permissions
+sudo chown www-data:root $final_path/{data,tmp}
+sudo chmod 700 $final_path/{data,tmp}
+
+# Modify Nginx configuration file and copy it to Nginx conf directory
+sed -i "s@YNH_WWW_PATH@$path@g" ../conf/nginx.conf
+sed -i "s@YNH_WWW_ALIAS@$final_path/@g" ../conf/nginx.conf
+nginxconf=/etc/nginx/conf.d/$domain.d/htmltool.conf
+sudo cp ../conf/nginx.conf $nginxconf
+sudo chown root: $nginxconf
+sudo chmod 600 $nginxconf
+
+if [ "$is_public" = "Yes" ];
+then
+  sudo yunohost app setting htmltool skipped_uris -v "/"
+fi
+
+sudo service nginx reload
+sudo yunohost app ssowatconf

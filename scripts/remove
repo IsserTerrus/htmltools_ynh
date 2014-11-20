@@ -1,0 +1,6 @@
+#!/bin/bash
+
+domain=$(sudo yunohost app setting htmltool domain)
+
+sudo rm -rf /var/www/htmltool
+sudo rm -f /etc/nginx/conf.d/$domain.d/htmltool.conf
