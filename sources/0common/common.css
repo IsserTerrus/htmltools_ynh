@@ -1,0 +1,83 @@
+body {
+	background-color: white;
+	color: #222;
+	text-align: center;
+	font-size: 16px;
+	font-family: 'trebuchet ms', arial, sans-serif;
+}
+
+a { text-decoration: none; color: inherit; }
+a:hover { text-decoration: underline; }
+
+#header {
+	margin: 30px auto 60px;
+}
+
+#header .titre {
+	font-size: 220%;
+	text-shadow: 3px 3px 5px silver;
+}
+
+.main-form {
+	max-width: 1000px;
+	margin: 0 auto 50px;
+	padding: 20px;
+}
+
+.main-form .text {
+	padding: 3px 10px;
+	border: 1px solid silver;
+	border-radius: 5px;
+	text-align: center;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.main-form .centrer {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	margin: auto auto;
+}
+
+.main-form ul {
+	text-align: left;
+}
+
+.main-form .submit-centrer {
+	margin: 10px auto;
+	height: 2em;
+	line-height: 2em;
+	width: 10em;
+	font-size: 120%;
+	vertical-align: middle;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	border-radius: 7px;
+	box-shadow: rgba(0, 0, 0, 0.506) 0px 1px 2px 0px;
+	color: #fff;
+	border: solid 1px red;
+	background: #ff3030;
+}
+
+.main-form .submit-centrer:active {
+	position: relative;
+	top: 1px;
+	color: #ffdddd;
+	background: #EB0003;
+}
+
+
+.notes {
+	margin-top: 40px;
+	color:gray;
+}
+
+#footer {
+	font-size: 90%;
+	color: black;
+}
+
+#flattr {
+	margin: 20px;
+}
+

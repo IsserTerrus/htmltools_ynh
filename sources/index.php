@@ -269,10 +269,6 @@ a img {
 </section>
 
 <p>
-	<a href="tools.7z"><img src="0common/download.png" alt="download" title="Télécharger"/></a>
-</p>
-
-<p>
 	<a href="http://flattr.com/thing/1177565/Mes-petits-outils-en-ligne"><img src="0common/flattr.png" width="93" height="20" alt="Flattr this" title="Flattr this" /></a>
 </p>
 
